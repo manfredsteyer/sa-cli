@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/standalone-cli",
             "index": "src/index.html",
@@ -24,9 +24,12 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/**/*.html"
             ],
             "styles": [
+              "node_modules/@angular-architects/paper-design/assets/css/bootstrap.css",
+              "node_modules/@angular-architects/paper-design/assets/scss/paper-dashboard.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -54,6 +57,7 @@
               "outputHashing": "all"
             },
             "development": {
+              "aot": false,
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
@@ -65,25 +69,26 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "standalone-cli:build:production"
             },
             "development": {
+              "extraWebpackConfig": "webpack.conf.js",
               "browserTarget": "standalone-cli:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "builder": "ngx-build-plus:extract-i18n",
           "options": {
             "browserTarget": "standalone-cli:build"
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",

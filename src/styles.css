@@ -1,1 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+.active-card {
+    background-color: rgb(204, 197, 185);
+}
+
