@@ -1,12 +1,10 @@
 import { CommonModule } from "@angular/common";
 import { Inject } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { CityPipe } from "src/app/shared/city.pipe";
-import { CityValidator } from "src/app/shared/city.validator";
-
+import { CityValidator } from "@demo/shared";
 import { Component } from "../../standalone-shim";
 import { FlightCardComponent } from "../flight-card/flight-card.component";
-import { FlightService } from "../model/flight.service";
+import { FlightService } from "@demo/data";
 
 @Component({
   standalone: true,
@@ -16,7 +14,7 @@ import { FlightService } from "../model/flight.service";
     FlightCardComponent,
     CityValidator,
   ],
-  providers: [FlightService],
+  // providers: [FlightService],
   selector: 'flight-search',
   template: require('./flight-search.component.html')
 })

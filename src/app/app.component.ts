@@ -1,10 +1,14 @@
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-import { FlightBookingComponent } from './booking/flight-booking.component';
 import { HomeComponent } from './home/home.component';
-import { NavbarComponent, SidebarComponent } from './shell';
 import { Component } from './standalone-shim';
+import { all } from './utils';
+
+// Options for importing esm modules
+import { NavbarComponent, SidebarComponent } from './shell';
+// import * as shell from '@demo/shell';
+// import * as shell from './shell';
 
 @Component({
   standalone: true,
@@ -13,6 +17,7 @@ import { Component } from './standalone-shim';
   imports: [
     NavbarComponent, 
     SidebarComponent,
+    // ...all(shell),
     HomeComponent,
     AboutComponent,
     HttpClientModule,
@@ -28,8 +33,8 @@ import { Component } from './standalone-shim';
       },
       { 
         path: 'flight-booking', 
-        // component: FlightBookingComponent
-        loadChildren: () => import('./booking/flight-booking.component').then(m => m.FlightBookingComponent['module'])
+        loadChildren: () => import('./booking/flight-booking.component')
+          .then(m => m.FlightBookingComponent['module'])
       }
     ])
   

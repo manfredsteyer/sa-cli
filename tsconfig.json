@@ -12,6 +12,12 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@demo/data": ["src/app/data/index.ts"],
+      "@demo/shared": ["src/app/shared/index.ts"],
+      "@demo/shell": ["src/app/shell/index.ts"]
+
+    }
   }
 }

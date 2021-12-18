@@ -1,4 +1,4 @@
-import { FlightService } from "../booking/model/flight.service";
+import { FlightService } from "../data/flight.service";
 import { Component } from "../standalone-shim";
 
 @Component({

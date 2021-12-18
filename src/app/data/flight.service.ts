@@ -3,11 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Flight } from './flight';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class FlightService {
   flights: Flight[] = [];
   baseUrl = `http://www.angular.at/api`;
-  // baseUrl = `http://localhost:3000`;
 
   reqDelay = 1000;
 

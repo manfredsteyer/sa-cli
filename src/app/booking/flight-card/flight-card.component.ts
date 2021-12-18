@@ -1,9 +1,9 @@
 import { CommonModule } from "@angular/common";
 import { EventEmitter, Input, Output } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { CityPipe } from "src/app/shared/city.pipe";
+import { CityPipe } from "@demo/shared";
 import { Component } from "../../standalone-shim";
-import { Flight } from "../model/flight";
+import { Flight } from "@demo/data";
 
 @Component({
   standalone: true,
