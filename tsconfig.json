@@ -16,8 +16,8 @@
     "paths": {
       "@demo/data": ["src/app/data/index.ts"],
       "@demo/shared": ["src/app/shared/index.ts"],
-      "@demo/shell": ["src/app/shell/index.ts"]
-
+      "@demo/shell": ["src/app/shell/index.ts"],
+      "@demo/booking": ["src/app/booking/index.ts"]
     }
   }
 }

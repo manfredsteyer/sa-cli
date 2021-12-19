@@ -1,0 +1,10 @@
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+
+@NgModule({
+    imports: [AppComponent],
+    exports: [],
+    declarations: [],
+    providers: [],
+})
+export class SomeModule { }

@@ -31,11 +31,19 @@ import { NavbarComponent, SidebarComponent } from './shell';
         path: 'about', 
         component: AboutComponent 
       },
+      // { 
+      //   path: 'flight-booking', 
+      //   loadChildren: () => 
+      //       import('./booking/flight-booking.component')
+      //         .then(m => m.FlightBookingComponent['module'])
+      // }
       { 
         path: 'flight-booking', 
-        loadChildren: () => import('./booking/flight-booking.component')
-          .then(m => m.FlightBookingComponent['module'])
+        loadChildren: () => 
+          import('@demo/booking')
+            .then(m => m.FlightBookingComponent['module'])
       }
+
     ])
   
   ],
