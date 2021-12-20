@@ -8,16 +8,15 @@ import { all } from './utils';
 // Options for importing esm modules
 import { NavbarComponent, SidebarComponent } from './shell';
 // import * as shell from '@demo/shell';
-// import * as shell from './shell';
+import * as shell from './shell';
 
 @Component({
   standalone: true,
   selector: 'app-root',
-  //imports: [...all(shell)],
   imports: [
-    NavbarComponent, 
-    SidebarComponent,
-    // ...all(shell),
+    // NavbarComponent, 
+    // SidebarComponent,
+    ...Object.keys(shell) as any[],
     HomeComponent,
     AboutComponent,
     HttpClientModule,

@@ -4,7 +4,10 @@ import { Component } from "../standalone-shim";
 @Component({
   standalone: true,
   selector: 'app-about',
-  template: require('./about.component.html')
+  template: `
+    <h1>About</h1>
+    <ng-container #container></ng-container>
+  `
 })
 export class AboutComponent {
   title = 'Standalone Demo';
@@ -15,6 +18,6 @@ export class AboutComponent {
   async ngOnInit() {
     const esm = await import('./lazy/lazy.component');
     const ref = this.viewContainer.createComponent(esm.LazyComponent)
-    ref.instance.title = `You've been haaacked!!`;
+    ref.instance.title = `I'm so lazy today!!`;
   }
 }

@@ -32,14 +32,12 @@ export function Component(
 
   return function (componentClazz) {
     @NgModule({
-      declarations: [[componentClazz]],
-      // TODO: is it a good idea to include CommonModule by default?
-      imports: [processedImports],
-      exports: [[componentClazz]],
-      // TODO: surprisingly the JIT compiler still requires entryComponents for ComponentFactoryResolver to work
-      entryComponents: [[componentClazz]],
-      schemas: componentMetadata.schemas,
-    })
+    declarations: [[componentClazz]],
+    // TODO: is it a good idea to include CommonModule by default?
+    imports: [processedImports],
+    exports: [[componentClazz]],
+    schemas: componentMetadata.schemas
+})
     class VirtualNgModule {}
 
     componentClazz['module'] = VirtualNgModule;
