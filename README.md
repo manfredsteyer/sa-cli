@@ -14,8 +14,11 @@ This show case shows the following aspects:
 - Interop between Standalone Components and NgModules
 - Using existing libs like NGRX and Angular Material
 
+## Preview
+
+![Preview of the Demo App](preview.png)
 
 ## Workarounds
 
-Workarounds to make the shim work: In order to make this shim work, I had to switch to JIT in ``angular.json``. As the AngularCompilerPlugin is bypassed, in order to load templates, I had to tweak the webpack configuration using ngx-build-plus and to load the templates via require. Also, I had to disable several checks performed by TypeScript (e. g. strict mode).
+Workarounds to make the shim work: In order to make this shim work, I had to switch to JIT in ``angular.json``. As the ``AngularCompilerPlugin`` is bypassed, in order to load templates, I had to tweak the webpack configuration using ``ngx-build-plus`` and to load the templates via require. Also, I had to disable several checks performed by TypeScript (e. g. strict mode).
 
