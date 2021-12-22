@@ -1,6 +1,6 @@
 # Demo Project for Standalone Components using a CLI Project
 
-Shows the upcoming idea of Standalone Components in the context of a demo application. As Standalone Components are **not** available yet, this demo uses a [shim](https://stackblitz.com/edit/ng-standalone) provided by the Angular team. This shim is **not indented for production** usage.
+Shows the upcoming idea of Standalone Components in the context of a demo application. As Standalone Components are **not** available yet, this demo uses a [shim](https://stackblitz.com/edit/ng-standalone) provided by the Angular team. This shim is **not intended for production** usage.
 
 ## Features
 
