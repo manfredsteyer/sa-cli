@@ -23,8 +23,6 @@ import { Inject, OnInit } from '@angular/core';
   standalone: true,
   selector: 'app-root',
   imports: [
-    // NavbarComponent, 
-    // SidebarComponent,
     StoreModule.forRoot(reducer),
     EffectsModule.forRoot(),
     StoreDevtoolsModule.instrument(),
