@@ -10,14 +10,15 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 // Options for importing esm modules
 import { NavbarComponent, SidebarComponent } from './shell';
-// import * as shell from '@demo/shell';
-import * as shell from './shell';
 import { reducer } from './+state';
 import { TicketsModule } from './tickets/tickets.module';
-import * as material from './material';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, Observable, shareReplay } from 'rxjs';
 import { Inject, OnInit } from '@angular/core';
+
+import * as shell from '@demo/shell';
+import * as material from './material';
+
 
 @Component({
   standalone: true,
