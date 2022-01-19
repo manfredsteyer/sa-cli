@@ -18,21 +18,38 @@ import * as material from './material';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, Observable, shareReplay } from 'rxjs';
 import { Inject, OnInit } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   standalone: true,
   selector: 'app-root',
   imports: [
-    // NavbarComponent, 
-    // SidebarComponent,
     StoreModule.forRoot(reducer),
     EffectsModule.forRoot(),
     StoreDevtoolsModule.instrument(),
-    ...Object.values(shell) as any[],
-    ...Object.values(material) as any[],
-    TicketsModule,
+
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+
+    NavbarComponent, 
+    SidebarComponent,
+
     HomeComponent,
     AboutComponent,
+
+    TicketsModule,
+
     HttpClientModule,
     RouterModule.forRoot([
       {
