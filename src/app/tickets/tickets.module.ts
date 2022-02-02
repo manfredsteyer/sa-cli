@@ -7,12 +7,14 @@ import { RouterModule } from '@angular/router';
 // This is for demonstrating the interaction between
 // code that uses NgModules and code that doesn't.
 
+// This line is just needed to make it work with the Shim
+const FlightCardComp = FlightCardComponent['module'] || FlightCardComponent;
+
+
 @NgModule({
   imports: [
+    FlightCardComp,
     CommonModule,
-    FlightCardComponent['module'] || FlightCardComponent,
-        // The || is just to please the compiler that dosn't know
-        // about the shim in place
     RouterModule.forChild([
       { path: 'my-tickets', component: MyTicketsComponent }
     ])
