@@ -11,12 +11,14 @@ This show case demonstrates the following aspects:
 - Lazy Loading
 - Structuring the application via barrels and path mappings
 - Standalone Pipes and Directives
+- Interop between Standalone Components and NgModules
+- Using existing libs like NGRX and Angular Material
 
-## More Features
+## Preview
 
-Please find another version of this application using NGRX, Angular Material, and Interop with existing NgModules [in this branch](https://github.com/manfredsteyer/sa-cli/tree/libs).  
+![Preview of the Demo App](preview.png)
 
 ## Workarounds
 
-Workarounds to make the shim work: In order to make this shim work, I had to switch to JIT in ``angular.json``. As the AngularCompilerPlugin is bypassed, in order to load templates, I had to tweak the webpack configuration using ngx-build-plus and to load the templates via require. Also, I had to disable several checks performed by TypeScript (e. g. strict mode).
+Workarounds to make the shim work: In order to make this shim work, I had to switch to JIT in ``angular.json``. As the ``AngularCompilerPlugin`` is bypassed, in order to load templates, I had to tweak the webpack configuration using ``ngx-build-plus`` and to load the templates via require. Also, I had to disable several checks performed by TypeScript (e. g. strict mode).
 
