@@ -4,7 +4,7 @@ Shows the upcoming idea of Standalone Components in the context of a demo applic
 
 ## Features
 
-This show case shows the following aspects:
+This show case demonstrates the following aspects:
 
 - Bootstrapping a Standalone Component
 - Routing with Standalone Components
