@@ -1,9 +1,8 @@
-import { Component } from "../../standalone-shim";
+import { Component } from '@angular/core';
 
 @Component({
   standalone: true,
   selector: 'app-passenger-search',
-  template: require('./passenger-search.component.html'),
+  templateUrl: './passenger-search.component.html',
 })
-export class PassengerSearchComponent {
-}
+export class PassengerSearchComponent {}

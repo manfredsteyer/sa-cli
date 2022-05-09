@@ -1,11 +1,10 @@
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Component } from '../../standalone-shim';
 
 @Component({
-    standalone: true,
-    selector: 'app-sidebar-cmp',
-    imports: [RouterModule],
-    template: require('./sidebar.component.html'),
+  standalone: true,
+  selector: 'app-sidebar-cmp',
+  imports: [RouterModule],
+  templateUrl: './sidebar.component.html',
 })
-export class SidebarComponent {
-}
+export class SidebarComponent {}
