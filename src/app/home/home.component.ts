@@ -1,9 +1,8 @@
-import { Component } from "../standalone-shim";
+import { Component } from '@angular/core';
 
 @Component({
   standalone: true,
   selector: 'app-home',
-  template: require('./home.component.html')
+  templateUrl: './home.component.html',
 })
-export class HomeComponent {
-}
+export class HomeComponent {}

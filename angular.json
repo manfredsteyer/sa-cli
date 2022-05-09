@@ -15,18 +15,14 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "ngx-build-plus:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/standalone-cli",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/**/*.html"
-            ],
+            "assets": ["src/favicon.ico", "src/assets", "src/**/*.html"],
             "styles": [
               "node_modules/@angular-architects/paper-design/assets/css/bootstrap.css",
               "node_modules/@angular-architects/paper-design/assets/scss/paper-dashboard.scss",
@@ -58,7 +54,6 @@
               "outputHashing": "all"
             },
             "development": {
-              "aot": false,
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
@@ -70,38 +65,32 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "ngx-build-plus:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "standalone-cli:build:production"
             },
             "development": {
-              "extraWebpackConfig": "webpack.conf.js",
               "browserTarget": "standalone-cli:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "ngx-build-plus:extract-i18n",
+          "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "standalone-cli:build"
           }
         },
         "test": {
-          "builder": "ngx-build-plus:karma",
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
             "scripts": []
           }
         }

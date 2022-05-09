@@ -1,18 +1,16 @@
-import { CommonModule } from "@angular/common";
-import { EventEmitter, Input, Output } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { CityPipe } from "@demo/shared";
-import { Component } from "../../standalone-shim";
-import { Flight } from "@demo/data";
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { Flight } from '@demo/data';
+import { CityPipe } from '@demo/shared';
 
 @Component({
   standalone: true,
   selector: 'flight-card',
   imports: [CommonModule, RouterModule, CityPipe],
-  template: require('./flight-card.component.html'),
+  templateUrl: './flight-card.component.html',
 })
 export class FlightCardComponent {
-  
   @Input() item: Flight | undefined;
   @Input() selected: boolean | undefined;
   @Output() selectedChange = new EventEmitter<boolean>();

@@ -1,16 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { Component } from '../../standalone-shim';
 
 @Component({
   standalone: true,
   imports: [CommonModule, RouterModule],
   selector: 'app-flight-edit',
-  template: require('./flight-edit.component.html'),
+  templateUrl: './flight-edit.component.html',
 })
 export class FlightEditComponent implements OnInit {
-  
   id: string | undefined;
   showDetails: string | undefined;
   showWarning = false;
@@ -23,5 +21,4 @@ export class FlightEditComponent implements OnInit {
       this.showDetails = p['showDetails'];
     });
   }
-
 }
